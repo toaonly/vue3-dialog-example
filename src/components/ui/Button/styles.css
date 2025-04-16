@@ -1,0 +1,138 @@
+@reference "../../../assets/base.css";
+
+.v-button {
+  --font-size: 16px;
+
+  @apply flex items-center justify-center gap-0.25;
+  @apply rounded-md;
+  @apply border-0;
+  @apply cursor-pointer;
+
+  font-weight: 600;
+  font-size: var(--font-size);
+
+  &.no-border {
+    @apply border-0;
+  }
+
+  &.circle {
+    @apply rounded-full;
+
+    &.v-button-size-sm {
+      @apply p-md;
+    }
+
+    &.v-button-size-md {
+      @apply p-lg;
+    }
+
+    &.v-button-size-lg {
+      @apply p-xl;
+    }
+  }
+
+  &:focus {
+    @apply outline-none;
+    @apply border-primary-100;
+  }
+
+  &.fluid {
+    @apply w-full;
+  }
+
+  &.v-button-size-sm {
+    @apply px-1 py-1.5;
+    @apply text-sm;
+
+    &.outlined {
+      @apply px-[13px];
+    }
+  }
+  &.v-button-size-md {
+    @apply px-1.25 py-2.5;
+
+    &.outlined {
+      @apply px-[17px];
+    }
+  }
+  &.v-button-size-lg {
+    @apply px-1.25 py-3;
+    @apply text-lg;
+
+    &.outlined {
+      @apply px-[19px];
+    }
+  }
+
+  &.primary {
+    @apply text-white;
+
+    &.outlined {
+      @apply bg-transparent hover:bg-transparent active:bg-transparent disabled:bg-transparent;
+      @apply border;
+    }
+  }
+
+  &.primary {
+    @apply bg-primary-500;
+
+    &:hover {
+      @apply bg-primary-400;
+    }
+    &:active {
+      @apply bg-primary-600;
+    }
+    &:disabled {
+      @apply bg-gray-500;
+    }
+
+    &.outlined {
+      @apply border-primary-500;
+      @apply text-primary-500;
+
+      &:hover {
+        @apply border-primary-400 text-primary-400;
+      }
+      &:active {
+        @apply border-primary-600 text-primary-600;
+      }
+      &:disabled {
+        @apply border-primary-200 text-primary-200;
+      }
+    }
+  }
+
+  &.transparent {
+    @apply bg-transparent;
+    @apply text-primary-500;
+
+    &:hover {
+      @apply bg-gray-300/5;
+    }
+    &:active {
+      @apply bg-gray-300/10;
+    }
+    &:disabled {
+      @apply text-gray-500;
+    }
+  }
+
+  &.outline {
+    @apply bg-transparent;
+    @apply border;
+    @apply border-solid;
+    @apply border-gray-300;
+    @apply text-gray-800;
+
+    &:hover {
+      @apply border-primary-500;
+    }
+    &:active {
+      @apply bg-gray-200;
+    }
+    &:disabled {
+      @apply border-gray-500;
+      @apply text-gray-500;
+    }
+  }
+}

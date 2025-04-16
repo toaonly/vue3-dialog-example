@@ -1,0 +1,37 @@
+@reference "../../../assets/base.css";
+
+.v-confirm {
+  .v-dialog-main {
+    @apply p-4;
+    width: 400px;
+
+    > header {
+      @apply m-0;
+      @apply text-black text-lg font-bold text-center;
+    }
+
+    .contents {
+      @apply block;
+      @apply mt-4;
+      @apply text-gray-800 text-sm;
+      line-height: 1.6;
+    }
+
+    .actions {
+      @apply flex flex-col items-center;
+      @apply w-full;
+      @apply mt-6;
+
+      .buttons {
+        @apply flex justify-center;
+        @apply w-full;
+      }
+
+      button {
+        &:not(:only-child):last-child {
+          @apply ml-2;
+        }
+      }
+    }
+  }
+}

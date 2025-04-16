@@ -1,0 +1,37 @@
+@reference "../../../assets/base.css";
+
+.v-dialog {
+  @apply absolute;
+  @apply w-0;
+  @apply h-0;
+
+  .v-dialog-backdrop {
+    @apply fixed top-0 left-0;
+    @apply flex items-center justify-center;
+    @apply w-screen h-screen;
+    @apply bg-black/75;
+  }
+
+  .v-dialog-container {
+    @apply fixed top-0 left-0;
+    @apply flex items-center justify-center;
+    @apply w-screen h-screen;
+    @apply p-2.5;
+    outline: none;
+
+    &.top {
+      @apply items-start;
+    }
+    &.bottom {
+      @apply items-end;
+    }
+  }
+
+  .v-dialog-main {
+    @apply rounded-[6px];
+    @apply bg-gray-100;
+    @apply relative;
+
+    box-shadow: rgba(0, 0, 0, 0.12) 0 12px 24px 0;
+  }
+}
